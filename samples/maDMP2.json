@@ -1,0 +1,245 @@
+{
+"dmp" : {
+    "title": "maDMP DSS Exercise 1 Summer Term 2020 Jacob Palecek 01526624",
+    "contact": {
+        "name": "Jacob Palecek",
+        "mbox": "jacob.palecek@student.tuwien.ac.at",
+        "contact_id": {
+            "identifier": "0000-0002-3844-1149",
+            "type": "orcid"
+        }
+    },
+    "description": "machine actionable version of the DSS exercise 1 DMP",
+    "language": "eng",
+    "created": "2020-04-20T20:13:14.456Z",
+    "modified": "2020-04-20T20:13:14.456Z",
+    "ethical_issues_exist": "no",
+    "dmp_id": {
+        "type": "doi",
+        "identifier": "10.5281/zenodo.3758477"
+    },
+    "project": [
+        {
+            "title": "DSS SS20 Ex1 Part1: Experiment",
+            "description": "This experiment is concerned with the automatic detection of spam (i.e.unwanted/pernicious) text messages. It is based on a fully labelled dataset consisting of alittle over 5000 text messages from various sources. The data is transformed such that it is more suitable for machine learning approaches, and then used to create a sequential neural network model using Keras with a Tensorflow backend. After training the final accuracy score and loss value are presented, alongside graphs that show their change over the course of model fitting.",
+            "start": "2020-04-11",
+            "end": "2020-04-20"
+        }
+    ],
+    "dataset": [
+        {
+            "title": "Text message input dataset",
+            "dataset_id": {
+                "identifier": "10.5281/zenodo.3757819",
+                "type": "doi"
+            },
+            "description": "The raw input data used in the experiment. Taken from Kaggle under https://www.kaggle.com/uciml/sms-spam-collection-dataset",
+            "type": "raw data",
+            "distribution": [
+                {
+                    "title": "Kaggle",
+                    "access_url": "https://www.kaggle.com/uciml/sms-spam-collection-dataset",
+                    "byte_size": 492000,
+                    "data_access": "open",
+                    "download_url": "https://www.kaggle.com/uciml/sms-spam-collection-dataset/download",
+                    "format": ["text/csv"],
+                    "license": [
+                        {
+                            "start_date": "2020-04-20",
+                            "license_ref": "https://www.kaggle.com/terms"
+                        }
+                    ]
+                }
+            ],
+            "issued": "2020-04-20",
+            "keyword": ["input data", "csv", "kaggle", "spam", "text message"],
+            "language": "eng",
+            "personal_data": "no",
+            "sensitive_data": "no",
+            "security_and_privacy": [
+                {
+                    "title": "No local data storage",
+                    "description": "Project members will not store data or software on computers in the lab or external hard drives connected to those computers."
+                },
+                {
+                    "title": "No data transport",
+                    "description": "Project members will not carry data with them (e.g. on laptops, USB sticks, or other external media)"
+                },
+                {
+                    "title": "Trustworthy datacenters",
+                    "description": "All data centers where project data is stored carry sufficient certifications."
+                },
+                {
+                    "title": "Transport Layer Security",
+                    "description": "All project web services addressed via secure http (https://...)."
+                },
+                {
+                    "title": "Personnell is instructed",
+                    "description": "Project members have been instructed about both generic and specific risks to the project."
+                }
+            ],
+            "preservation_statement": "Text message input dataset will be stored in a domain-specific repository: Kaggle Datasets. We don't need to contact the repository because it is a routine for us. None of the used repositories charge for their services."
+        },
+        {
+            "title": "Input data after preprocessing (tokenization and vectorization) ",
+            "dataset_id": {
+                "identifier": "10.5281/zenodo.3758037",
+                "type": "doi"
+            },
+            "description": "The raw data once it has been split into inputs and class labels as well as training and testing sets, which are then tokenized and vectorized for machine learning",
+            "type": "raw data",
+            "distribution": [
+                {
+                    "title": "GitHub",
+                    "access_url": "https://github.com/jjnp/dss20-ue1/tree/master/comparison_results",
+                    "byte_size": 223051356,
+                    "data_access": "open",
+                    "download_url": "https://github.com/jjnp/dss20-ue1/archive/master.zip",
+                    "format": ["text/csv"],
+                    "license": [
+                        {
+                            "start_date": "2020-04-20",
+                            "license_ref": "https://creativecommons.org/licenses/by/4.0/legalcode"
+                        }
+                    ]
+                }
+            ],
+            "issued": "2020-04-20",
+            "keyword": ["processed data", "csv", "vectorized", "tokenized", "intermediary"],
+            "language": "eng",
+            "personal_data": "no",
+            "sensitive_data": "no",
+            "security_and_privacy": [
+                {
+                    "title": "No local data storage",
+                    "description": "Project members will not store data or software on computers in the lab or external hard drives connected to those computers."
+                },
+                {
+                    "title": "No data transport",
+                    "description": "Project members will not carry data with them (e.g. on laptops, USB sticks, or other external media)"
+                },
+                {
+                    "title": "Trustworthy datacenters",
+                    "description": "All data centers where project data is stored carry sufficient certifications."
+                },
+                {
+                    "title": "Transport Layer Security",
+                    "description": "All project web services addressed via secure http (https://...)."
+                },
+                {
+                    "title": "Personnell is instructed",
+                    "description": "Project members have been instructed about both generic and specific risks to the project."
+                }
+            ],
+            "preservation_statement": "Input data after preprocessing will be stored in a domain-specific repository: GitHub. We don't need to contact the repository because it is a routine for us. None of the used repositories charge for their services."
+        },
+        {
+            "title": "Experiment output data",
+            "dataset_id": {
+                "identifier": "10.5281/zenodo.3758323",
+                "type": "doi"
+            },
+            "description": "The output of the experiment, which consists of a text file containing final accuracy and loss scores, as well as two graphs showing progress of accuracy and loss over the training epochs",
+            "type": "raw data",
+            "distribution": [
+                {
+                    "title": "GitHub",
+                    "access_url": "https://github.com/jjnp/dss20-ue1/tree/master/comparison_results",
+                    "byte_size": 57538,
+                    "data_access": "open",
+                    "download_url": "https://github.com/jjnp/dss20-ue1/archive/master.zip",
+                    "format": ["image/png", "text/richtext"],
+                    "license": [
+                        {
+                            "start_date": "2020-04-20",
+                            "license_ref": "https://creativecommons.org/licenses/by/4.0/legalcode"
+                        }
+                    ]
+                }
+            ],
+            "issued": "2020-04-20",
+            "keyword": ["results", "accuracy", "loss", "graphcs", "graphics", "epochs"],
+            "language": "eng",
+            "personal_data": "no",
+            "sensitive_data": "no",
+            "security_and_privacy": [
+                {
+                    "title": "No local data storage",
+                    "description": "Project members will not store data or software on computers in the lab or external hard drives connected to those computers."
+                },
+                {
+                    "title": "No data transport",
+                    "description": "Project members will not carry data with them (e.g. on laptops, USB sticks, or other external media)"
+                },
+                {
+                    "title": "Trustworthy datacenters",
+                    "description": "All data centers where project data is stored carry sufficient certifications."
+                },
+                {
+                    "title": "Transport Layer Security",
+                    "description": "All project web services addressed via secure http (https://...)."
+                },
+                {
+                    "title": "Personnell is instructed",
+                    "description": "Project members have been instructed about both generic and specific risks to the project."
+                }
+            ],
+            "preservation_statement": "Experiment output will be stored in a domain-specific repository: GitHub. We don't need to contact the repository because it is a routine for us. None of the used repositories charge for their services."
+        },
+        {
+            "title": "Experiment Code",
+            "dataset_id": {
+                "identifier": "10.5281/zenodo.3758024",
+                "type": "doi"
+            },
+            "description": "Code of the experiment that has been run. Repository also includes necessary source data",
+            "type": "raw data",
+            "distribution": [
+                {
+                    "title": "GitHub",
+                    "access_url": "https://github.com/jjnp/dss20-ue1/tree/master",
+                    "byte_size": 46812963,
+                    "data_access": "open",
+                    "download_url": "https://github.com/jjnp/dss20-ue1/archive/master.zip",
+                    "format": ["image/png", "text/richtext", "text/csv"],
+                    "license": [
+                        {
+                            "start_date": "2020-04-20",
+                            "license_ref": "https://creativecommons.org/licenses/by/4.0/legalcode"
+                        }
+                    ]
+                }
+            ],
+            "issued": "2020-04-20",
+            "keyword": ["code", "python", "docker", "experiment", "source"],
+            "language": "eng",
+            "personal_data": "no",
+            "sensitive_data": "no",
+            "security_and_privacy": [
+                {
+                    "title": "No local data storage",
+                    "description": "Project members will not store data or software on computers in the lab or external hard drives connected to those computers."
+                },
+                {
+                    "title": "No data transport",
+                    "description": "Project members will not carry data with them (e.g. on laptops, USB sticks, or other external media)"
+                },
+                {
+                    "title": "Trustworthy datacenters",
+                    "description": "All data centers where project data is stored carry sufficient certifications."
+                },
+                {
+                    "title": "Transport Layer Security",
+                    "description": "All project web services addressed via secure http (https://...)."
+                },
+                {
+                    "title": "Personnell is instructed",
+                    "description": "Project members have been instructed about both generic and specific risks to the project."
+                }
+            ],
+            "preservation_statement": "Experiment source code will be stored in a domain-specific repository: GitHub. We don't need to contact the repository because it is a routine for us. None of the used repositories charge for their services."
+        }
+    ]
+}
+}
+
