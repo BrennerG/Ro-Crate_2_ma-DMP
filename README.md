@@ -1,4 +1,7 @@
 # DS Exercise 2 Notes
+[Ro-Crate](https://researchobject.github.io/ro-crate/1.0/)
+[RDA ma-DMPs](https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard)
+
 ## TODO
 * [x] Research schema.org (JSON-LD)
 * [x] Research ro-Crates (1.0)
@@ -15,7 +18,7 @@
 * [ ] Zenodo
 
 ## Thoughts
-use ro-crate-py ?  
+[use ro-crate-py ?](https://github.com/ResearchObject/ro-crate-py/tree/master/rocrate)
 
 # RO-Crates
 ## General
@@ -44,3 +47,6 @@ A valid RO-Crate JSON-LD graph MUST describe:
 * RO:File = JSON:MediaObject
 * RO:Journal = JSON:Periodical
 * RO:Metadata File Descriptor = CreativeWork
+
+# MA-DMPs
+## List of sample DMPs
