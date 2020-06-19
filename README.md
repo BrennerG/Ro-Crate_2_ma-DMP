@@ -2,7 +2,7 @@
 ## TODO
 * [x] Research schema.org (JSON-LD)
 * [x] Research ro-Crates (1.0)
-* [ ] Create Github Repo
+* [x] Create Github Repo
 * [ ] Get example 10 maDMPs (5/5)
 * [ ] Get example 5 ro-crates
 * [ ] Create Mappings (both directions necessary?)
