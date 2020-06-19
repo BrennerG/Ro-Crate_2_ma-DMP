@@ -7,7 +7,7 @@
 * [x] Research ro-Crates (1.0)
 * [x] Create Github Repo
 * [x] Get example 10 maDMPs (5/5)
-* [ ] Get example 5 ro-crates
+* [x] Get example 5 ro-crates
 * [ ] Create Mappings (both directions necessary?)
 * [ ] DMP to RO-Crate (10x)
 * [ ] RO-Crate to DMP (5x)

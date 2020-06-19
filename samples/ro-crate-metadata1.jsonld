@@ -1,0 +1,424 @@
+{
+  "@context": "https://raw.githubusercontent.com/ResearchObject/ro-crate/master/docs/0.2-DRAFT/context.json",
+  "@graph": [
+    {
+      "@id": "http://uts.edu.au",
+      "@type": "Organization",
+      "identifier": "http://uts.edu.au",
+      "name": "University of Technology Sdyney"
+    },
+    {
+      "@id": "http://wsu.edu.au",
+      "@type": "Organization",
+      "identifier": "http://wsu.edu.au",
+      "name": "Western Sydney University"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.1445817",
+      "@type": "Dataset",
+      "contactPoint": {
+        "@id": "https://orcid.org/0000-0002-3545-944X"
+      },
+      "path": "./",
+      "creator": {
+        "@id": "https://orcid.org/0000-0002-3545-944X"
+      },
+      "datePublished": "2018-07-15",
+      "description": "This is an example DataCrate package for submissing a paper/presentation proposal to Research Object 2018.",
+      "hasPart": [
+        {
+          "@id": "data/paper.pdf"
+        },
+        {
+          "@id": "data/paper.html"
+        },
+        {
+          "@id": "data/temporal_coverage.png"
+        },
+        {
+          "@id": "data/interviewee.png"
+        },
+        {
+          "@id": "data/src"
+        }
+      ],
+      "identifier": [
+        "https://doi.org/10.5281/zenodo.1445817",
+        "doi.org/10.5281/zenodo.1445817"
+      ],
+      "name": "DataCrate Submisssion to the Workshop on Research Objects (RO2018)",
+      "publisher": "University of Technology Sydney",
+      "distribution": [
+        {
+          "@id": "https://data.research.uts.edu.au/examples/ro-crate/0.2datacrate-RO-2018.zip"
+        }
+      ]
+    },
+    {
+      "@id": "https://email.itd.uts.edu.au/webapps/directory/entry.mason?entry=dWlkPTExODAyNSxvdT1TdGFmZixvPXV0cy5lZHUuYXUsbz1VVFM=",
+      "@type": "Person",
+      "affiliation": "University of Technology Sydney",
+      "email": "duncan.loxton@uts.edu.au",
+      "familyName": "Loxton",
+      "givenName": "Duncan",
+      "identifier": "https://email.itd.uts.edu.au/webapps/directory/entry.mason?entry=dWlkPTExODAyNSxvdT1TdGFmZixvPXV0cy5lZHUuYXUsbz1VVFM=",
+      "name": "Duncan Loxton"
+    },
+    {
+      "@id": "https://github.com/stsewd/ieee-pandoc-template",
+      "@type": "Project",
+      "description": "Pandoc template for producing IEEE-styled PDFs from markdown source",
+      "identifier": "https://github.com/stsewd/ieee-pandoc-template",
+      "name": "IEEE Paper Template for Pandoc"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-5152-5307",
+      "@type": "Person",
+      "affiliation": "University of Technology Sydney",
+      "email": "michael.lynch@uts.edu.au",
+      "familyName": "Lynch",
+      "givenName": "Michael",
+      "identifier": "https://orcid.org/0000-0001-5152-5307",
+      "name": "Michael Lynch"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-7677-780X",
+      "@type": "Person",
+      "affiliation": "University of Technology Sydney",
+      "email": "sharyn.wise@uts.edu.au",
+      "familyName": "Wise",
+      "givenName": "Sharyn",
+      "identifier": "https://orcid.org/0000-0001-7677-780X",
+      "name": "Sharyn Wise"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-9903-7716",
+      "@type": "Person",
+      "affiliation": "University of Technology Sydney",
+      "email": "christian.evenhuis@uts.edu.au",
+      "familyName": "Evenhuis",
+      "givenName": "Christian",
+      "identifier": "https://orcid.org/0000-0001-9903-7716",
+      "name": "Christian"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0074-112X",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "http://wsu.edu.au"
+      },
+      "email": "g.devine@wsu.edu.au",
+      "familyName": "Devine",
+      "givenName": "Gerard",
+      "identifier": "https://orcid.org/0000-0002-0074-112X",
+      "name": "Gerard Devine"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-3545-944X",
+      "@type": "Person",
+      "affiliation": "University of Technology Sydney",
+      "email": "peter.sefton@uts.edu.au",
+      "familyName": "Sefton",
+      "givenName": "Peter",
+      "identifier": "https://orcid.org/0000-0002-3545-944X",
+      "name": "Peter Sefton"
+    },
+    {
+      "@id": "data/interviewee.png",
+      "@type": "File",
+      "contentSize": "20920",
+      "path": "data/interviewee.png",
+      "creator": "Screnshot illustrating how terms are linked to explanatory pages",
+      "encodingFormat": "Portable Network Graphics",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/13",
+      "name": "interviewee.png",
+      "sameAs": {
+        "@id": "data/src/interviewee.png"
+      }
+    },
+    {
+      "@id": "data/paper.html",
+      "@type": "File",
+      "contentSize": "42254",
+      "path": "data/paper.html",
+      "creator": [
+        {
+          "@id": "https://orcid.org/0000-0002-3545-944X"
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-5152-5307"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-0074-112X"
+        },
+        {
+          "@id": "https://email.itd.uts.edu.au/webapps/directory/entry.mason?entry=dWlkPTExODAyNSxvdT1TdGFmZixvPXV0cy5lZHUuYXUsbz1VVFM="
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-7677-780X"
+        },
+        "Christian Evenhuis"
+      ],
+      "description": "HTML Version of submission document for Research Object 2018",
+      "encodesCreativeWork": {
+        "@id": "data/src/paper.md"
+      },
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "license": "https://creativecommons.org/licenses/by/3.0/au/",
+      "name": "DataCrate: a method of packaging, distributing, displaying and archiving Research Objects (HTML)"
+    },
+    {
+      "@id": "data/paper.pdf",
+      "@type": "File",
+      "contentSize": "382032",
+      "path": "data/paper.pdf",
+      "creator": [
+        {
+          "@id": "https://orcid.org/0000-0002-3545-944X"
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-5152-5307"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-0074-112X"
+        },
+        {
+          "@id": "https://email.itd.uts.edu.au/webapps/directory/entry.mason?entry=dWlkPTExODAyNSxvdT1TdGFmZixvPXV0cy5lZHUuYXUsbz1VVFM="
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-7677-780X"
+        },
+        "Christian Evenhuis"
+      ],
+      "description": "PDF verision of submission document for Research Object 2018 ",
+      "encodesCreativeWork": {
+        "@id": "data/src/paper.md"
+      },
+      "encodingFormat": "Acrobat PDF 1.5 - Portable Document Format",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/19",
+      "license": "https://creativecommons.org/licenses/by/3.0/au/",
+      "name": "DataCrate: a method of packaging, distributing, displaying and archiving Research Objects (PDF)"
+    },
+    {
+      "@id": "data/src",
+      "@type": "Dataset",
+      "path": "data/src",
+      "description": "Markdown source , metadata and template files",
+      "hasPart": [
+        {
+          "@id": "data/src/LICENSE"
+        },
+        {
+          "@id": "data/src/README.md"
+        },
+        {
+          "@id": "data/src/bibliography.bib"
+        },
+        {
+          "@id": "data/src/bibliography.csl"
+        },
+        {
+          "@id": "data/src/makefile"
+        },
+        {
+          "@id": "data/src/metadata.yaml"
+        },
+        {
+          "@id": "data/src/paper.md"
+        },
+        {
+          "@id": "data/src/template.latex"
+        },
+        {
+          "@id": "data/src/temporal_coverage.png"
+        },
+        {
+          "@id": "data/src/template.html"
+        },
+        {
+          "@id": "data/src/interviewee.png"
+        }
+      ],
+      "identifier": "./src",
+      "name": "Source files"
+    },
+    {
+      "@id": "data/src/LICENSE",
+      "@type": "File",
+      "contentSize": "1072",
+      "path": "data/src/LICENSE",
+      "description": "License for the template code used to generate PDF",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": "MIT License",
+      "name": "MIT License"
+    },
+    {
+      "@id": "data/src/README.md",
+      "@type": "File",
+      "contentSize": "2527",
+      "path": "data/src/README.md",
+      "description": "README file for IEEE Pandoc Template",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": {
+        "@id": "data/src/LICENSE"
+      },
+      "name": "src/README.md"
+    },
+    {
+      "@id": "data/src/bibliography.bib",
+      "@type": "File",
+      "contentSize": "338712",
+      "path": "data/src/bibliography.bib",
+      "creator": [
+        {
+          "@id": "https://orcid.org/0000-0002-3545-944X"
+        },
+        "Christian Evenhuis"
+      ],
+      "description": "References for the submission",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": "https://creativecommons.org/licenses/by/3.0/au/",
+      "name": "src/bibliography.bib"
+    },
+    {
+      "@id": "data/src/bibliography.csl",
+      "@type": "File",
+      "contentSize": "11379",
+      "path": "data/src/bibliography.csl",
+      "description": "Citation definition. Modified by Peter Sefton to always show a URL for each reference, but needs more work as it is duplicating URLs",
+      "encodingFormat": "Extensible Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/101",
+      "license": {
+        "@id": "data/src/LICENSE"
+      },
+      "name": "src/bibliography.csl"
+    },
+    {
+      "@id": "data/src/interviewee.png",
+      "@type": "File",
+      "contentSize": "20920",
+      "path": "data/src/interviewee.png",
+      "description": "Screnshot illustrating how terms are linked to explanatory pages",
+      "encodingFormat": "Portable Network Graphics",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/13",
+      "name": "src/interviewee.png"
+    },
+    {
+      "@id": "data/src/makefile",
+      "@type": "File",
+      "contentSize": "411",
+      "path": "data/src/makefile",
+      "description": "Part of the IEEE Paper Template for Pandoc",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": {
+        "@id": "data/src/LICENSE"
+      },
+      "name": "src/makefile"
+    },
+    {
+      "@id": "data/src/metadata.yaml",
+      "@type": "File",
+      "contentSize": "2071",
+      "path": "data/src/metadata.yaml",
+      "creator": {
+        "@id": "https://orcid.org/0000-0002-3545-944X"
+      },
+      "description": "Metadata template from IEEE Paper Template for Pandoc filled out with author names, abstract & keywords",
+      "encodingFormat": "YAML",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/818",
+      "license": "https://creativecommons.org/licenses/by/3.0/au/",
+      "name": "src/metadata.yaml"
+    },
+    {
+      "@id": "data/src/paper.md",
+      "@type": "File",
+      "contentSize": "28892",
+      "path": "data/src/paper.md",
+      "creator": [
+        {
+          "@id": "https://orcid.org/0000-0002-3545-944X"
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-5152-5307"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-0074-112X"
+        },
+        {
+          "@id": "https://email.itd.uts.edu.au/webapps/directory/entry.mason?entry=dWlkPTExODAyNSxvdT1TdGFmZixvPXV0cy5lZHUuYXUsbz1VVFM="
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-7677-780X"
+        },
+        "Christian Evenhuis"
+      ],
+      "description": "Markdown source file",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": "https://creativecommons.org/licenses/by/3.0/au/",
+      "name": "DataCrate: a method of packaging, distributing, displaying and archiving Research Objects"
+    },
+    {
+      "@id": "data/src/template.html",
+      "@type": "File",
+      "contentSize": "607",
+      "path": "data/src/template.html",
+      "creator": {
+        "@id": "https://orcid.org/0000-0002-3545-944X"
+      },
+      "description": "HTML Template",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "license": "https://creativecommons.org/licenses/by/3.0/au/",
+      "name": "src/template.html"
+    },
+    {
+      "@id": "data/src/template.latex",
+      "@type": "File",
+      "contentSize": "7676",
+      "path": "data/src/template.latex",
+      "description": "LaTeX template for generating an IEEE paper from paper.md. Modified by Peter Seftont to highlight links in the PDF on screen",
+      "encodingFormat": "LaTeX (Master document)",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/280",
+      "license": "https://creativecommons.org/licenses/by/3.0/au/",
+      "name": "src/template.latex"
+    },
+    {
+      "@id": "data/src/temporal_coverage.png",
+      "@type": "File",
+      "contentSize": "15998",
+      "path": "data/src/temporal_coverage.png",
+      "creator": {
+        "@id": "https://orcid.org/0000-0002-3545-944X"
+      },
+      "description": "Screenshot from <https://data.research.uts.edu.au/examples/v0.2/sample/>",
+      "encodingFormat": "Portable Network Graphics",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/13",
+      "name": "src/temporal_coverage.png"
+    },
+    {
+      "@id": "data/temporal_coverage.png",
+      "@type": "File",
+      "contentSize": "15998",
+      "path": "data/temporal_coverage.png",
+      "creator": "Unused screenshot",
+      "encodingFormat": "Portable Network Graphics",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/13",
+      "name": "temporal_coverage.png",
+      "sameAs": {
+        "@id": "data/src/temporal_coverage.png"
+      }
+    },
+    {
+      "@id": "https://data.research.uts.edu.au/examples/ro-crate/0.2datacrate-RO-2018.zip",
+      "contentUrl": "https://data.research.uts.edu.au/examples/ro-crate/0.2datacrate-RO-2018.zip",
+      "@type": "DataDownload",
+      "encodingFormat": "zip"
+    }
+  ]
+}
