@@ -1,0 +1,48 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        },
+        {
+            "@id": "https://doi.org/10.5281/zenodo.3757969",
+            "@type": "File",
+            "encodingFormat": "RDA ma-DMP",
+            "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&id=1617",
+            "path": "samples/maDMP5.json",
+            "name": "Analysis of multilayer perceptron on hypothyroid dataset using Weka DMP",
+            "description": "The evaluation of the two classification algorithms: random forests and multilayer perceptron (MLP) on the example of an analysis of thyroid disease record dataset. Dataset consist of 3772 instances and 30 attributes. The data is preprocessed, and the mentioned algorithm are executed, in Weka Toolkit (Explorer).",
+            "dateCreated": "2020-04-20 14:00",
+            "Language": "eng",
+            "dateModified": "2020-04-20 14:00"
+        },
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0001-7084-3423",
+            "name": "Mensur Besirovic",
+            "email": "mensur.besirovic@tuwien.ac.at"
+        },
+        {
+            "@id": "https://zenodo.org/badge/latestdoi/257124636",
+            "@type": "File",
+            "description": "Produced data consist of models, parameters and errors files, each for corresponding analysis",
+            "Language": "eng",
+            "dateCreated": "2020-04-19",
+            "URL": "https://github.com/mensBash/DataStewardship/tree/master/weka_experiment",
+            "license": [
+                {
+                    "@id": "https://creativecommons.org/publicdomain/zero/1.0/deed.de",
+                    "@type": "CreativeWork",
+                    "startDate": "2020-04-19"
+                }
+            ]
+        }
+    ]
+}

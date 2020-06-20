@@ -14,6 +14,8 @@ class RO_Crate_constructor:
 
         if 'project' in self.maDMP:
             self.PROJECT = self.maDMP['project']
+        else:
+            self.PROJECT = []
 
         if 'dataset' in self.maDMP:
             self.DATASET = self.maDMP['dataset']
@@ -295,8 +297,8 @@ class RO_Crate_constructor:
 
 # MAIN
 if __name__ == "__main__":
-    in_PATH = 'samples/maDMP1.json'
-    out_PATH = 'transformation1b.jsonld'
+    in_PATH = 'samples/maDMP5.json'
+    out_PATH = 'transformation5.jsonld'
 
     RCC = RO_Crate_constructor(in_PATH)
     rocrate = RCC.construct()
