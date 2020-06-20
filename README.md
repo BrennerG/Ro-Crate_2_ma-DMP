@@ -1,6 +1,7 @@
 # DS Exercise 2 Notes
-[Ro-Crate](https://researchobject.github.io/ro-crate/1.0/)
-[RDA ma-DMPs](https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard)
+[Ro-Crate](https://researchobject.github.io/ro-crate/1.0/)  
+[RDA ma-DMPs](https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard)  
+[Ro-Crate JSON-LD context](https://researchobject.github.io/ro-crate/1.0/context.jsonld)  
 
 ## TODO
 * [x] Research schema.org (JSON-LD)
@@ -18,8 +19,8 @@
 * [ ] Zenodo
 
 ## Thoughts
-[use ro-crate-py ?](https://github.com/ResearchObject/ro-crate-py/tree/master/rocrate)
-difference between schema:name & schema:title ?!
+[use ro-crate-py ?](https://github.com/ResearchObject/ro-crate-py/tree/master/rocrate)  
+difference between schema:name & schema:title ?!  
 
 # RO-Crates
 ## General
@@ -29,12 +30,12 @@ metadatafile should use [JSON-LD Context](https://researchobject.github.io/ro-cr
 A minimal RO-Crate is a directory containing a single RO-Crate Metadata File.  
 
 ## Contents of a RO-Crate
-<RO-Crate root directory>/  
-|   ro-crate-metadata.jsonld            # RO-Crate Metadata File MUST be present  
-|   ro-crate-preview.html               # RO-Crate Website homepage MAY be present  
-|   ro-crate-preview_files/             # MAY be present  
-|    | [other RO-Crate Website files]  
-|   [payload files and directories]     # 1 or more SHOULD be present  
+* <RO-Crate root directory>/  
+    - |   ro-crate-metadata.jsonld            # RO-Crate Metadata File MUST be present  
+    - |   ro-crate-preview.html               # RO-Crate Website homepage MAY be present  
+    - |   ro-crate-preview_files/             # MAY be present  
+        - |    | [other RO-Crate Website files]  
+    - |   [payload files and directories]     # 1 or more SHOULD be present  
 
 ## Metadata file
 A valid RO-Crate JSON-LD graph MUST describe:  
@@ -93,14 +94,14 @@ A valid RO-Crate JSON-LD graph MUST describe:
 * Contributor
     same as Contact above, but possibly with multiple entities  
 
-* Cost [schema/MonetaryAmount]
+* Cost [schema/MonetaryAmount](https://schema.org/MonetaryAmount)
     - title -> schema:name
     - description -> schema:description
     - currency_code -> schema:currency
     - value -> schema:value
 
-* Dataset (contains Distribution, License, Host, Security, Techical, Metadata)
-    [Referencing Data Entities](https://researchobject.github.io/ro-crate/1.0/#examples-of-referencing-data-entities-files-and-folders-from-the-root-data-entity)  
+* Dataset (contains Distribution, License, Host, Security, Techical, Metadata)  
+    [Referencing Data Entities](https://researchobject.github.io/ro-crate/1.0/#examples-of-referencing-data-entities-files-and-folders-from-the-root-data-entity)   
     - title -> schema:name
     - type  -> ??? String
     - data_quality_assurance -> ??? String
@@ -109,7 +110,7 @@ A valid RO-Crate JSON-LD graph MUST describe:
         - type -> above
     - description -> schema:description
     - issued -> schema:dateCreated
-    - keyword -> schema:keywords [more](https://researchobject.github.io/ro-crate/1.0/#subjects--keywords)
+    - keyword -> schema:keywords [more](https://researchobject.github.io/ro-crate/1.0/#subjects--keywords)  
     - language -> schema:Language
     - personal_data -> yes/no/unknown
     - preservation_statement -> ??? String
@@ -125,7 +126,7 @@ A valid RO-Crate JSON-LD graph MUST describe:
     - download_url -> ??? URI ?difference to access_url
     - format -> Pronom_id / schema:encodingFormat
 
-* License [Ro-Crate example](https://researchobject.github.io/ro-crate/1.0/#licensing-access-control-and-copyright)
+* License [Ro-Crate example](https://researchobject.github.io/ro-crate/1.0/#licensing-access-control-and-copyright)  
     - license_ref -> @id
     - start_date -> schema:startDate
 
@@ -148,12 +149,12 @@ A valid RO-Crate JSON-LD graph MUST describe:
 
 * Technical Resource 
     [Equipment](https://researchobject.github.io/ro-crate/1.0/#provenance-equipment-used-to-create-files)  
-    [Software](https://researchobject.github.io/ro-crate/1.0/#provenance-software-used-to-create-files)  
+    [Software](https://researchobject.github.io/ro-crate/1.0/#provenance-software-used-to-create-files)   
     - description -> schema:description
     - name -> schema:name
 
 * Metadata
-    [metadata license](https://researchobject.github.io/ro-crate/1.0/#metadata-license)  
+    [metadata license](https://researchobject.github.io/ro-crate/1.0/#metadata-license)   
     - description -> schema:description
     - language -> schema:Language
     - metadata_standard_id -> schema:identifier (?)
