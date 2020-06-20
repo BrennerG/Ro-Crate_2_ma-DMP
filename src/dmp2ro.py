@@ -103,6 +103,53 @@ class RO_Crate_constructor:
             "dateModified": modified,
         }
 
+    def extract_project_funding_R(self, project=None):
+        if project == None:
+            project = self.PROJECT
+
+        entities = []
+
+        if type(project) == list:
+            for proj in project:
+                for ent in self.extract_project_funding_R(proj):
+                    entities.append(ent)
+
+        elif type(project) == dict:
+            # extract project information
+            title = self.check('title', project)
+            description = self.check('description', project)
+            start = self.check('start', project)
+            end = self.check('end', project)
+
+            # extract funding information
+            funder_id = self.check('funder_id', project, 'funding')
+
+            # append project
+            entities.append({
+                # TODO what about the project id -> dmp_id???
+                # "@id": "https://eresearch.uts.edu.au/projects/provisioner",
+                "@type": "Organization",
+                "name": title,
+                "description": description,
+                "startDate": start,
+                "endDate": end,
+                "funder": [
+                    {
+                    "@id": funder_id
+                    }
+                ]
+            })
+
+            # append funder
+            entities.append({
+                "@id": funder_id,
+                "@type": "Organisation",
+                # TODO is there really no funders name in madmp ?!
+                # "name": "University of Technology Sydney"
+            })
+        
+        return entities
+
     def extract_project_funding(self):
         entities = []
 
@@ -141,7 +188,7 @@ class RO_Crate_constructor:
                 # "name": "University of Technology Sydney"
             })
 
-        return entities
+            return entities
 
     def extract_contributors(self):
         pass
@@ -170,7 +217,8 @@ class RO_Crate_constructor:
             # TODO https://researchobject.github.io/ro-crate/1.0/#subjects--keywords
             keyword = self.check('keyword', dset)
 
-            # distribution attributes (dropped: title, description, data_access, format)
+            # distribution attributes (dropped: description, data_access, format)
+            dist_title = self.check('title', dset, 'distribution')
             access_url = self.check('access_url', dset, 'distribution')
             download_url = self.check('download_url', dset, 'distribution')
             available_until = self.check('available_until', dset, 'distribution')
@@ -178,8 +226,7 @@ class RO_Crate_constructor:
 
             # license attributes
             licenses = []
-
-            if self.check('distribution', dset) and 'license' in dset['distribution'][0]:
+            if self.check('distribution', dset) and type(dset['distribution']) == list and 'license' in dset['distribution'][0]:
                 for lic in self.check('license', dset['distribution'][0]):
                     license_ref = self.check('license_ref', lic)
                     start_date = self.check('start_date', lic)
@@ -189,6 +236,16 @@ class RO_Crate_constructor:
                         "@type": "CreativeWork",
                         "startDate": start_date
                     })
+            elif self.check('distribution', dset) and self.check('license', dset, 'distribution'):
+                    license_ref = self.check('license_ref', dset['distribution']['license'])
+                    start_date = self.check('start_date', dset['distribution']['license'])
+
+                    licenses.append({
+                        "@id": license_ref,
+                        "@type": "CreativeWork",
+                        "startDate": start_date
+                    })
+
  
             # TODO metadata
             # TODO host
@@ -202,6 +259,8 @@ class RO_Crate_constructor:
                 "@type": "File",
                 # TODO more like this: "encodingFormat": ["text/plain", {"@id": "https://www.commonwl.org/v1.0/Workflow.html"}]
                 "encodingFormat": dtype,
+                # TODO really take the dist title and not the dataset title?
+                "name": dist_title,
                 "description": description,
                 "contentSize": byte_size,
                 "Language" : language,
@@ -224,7 +283,7 @@ class RO_Crate_constructor:
     def construct(self):
         self.add(self.extract_dmp_base())
         self.add(self.extract_contact())
-        self.add(self.extract_project_funding())
+        self.add(self.extract_project_funding_R())
         # TODO contributors
         # TODO cost -> no equivalence in RO-Crate
         self.add(self.extract_dataset())
@@ -236,8 +295,8 @@ class RO_Crate_constructor:
 
 # MAIN
 if __name__ == "__main__":
-    in_PATH = 'samples/maDMP3.json'
-    out_PATH = 'transformation3.jsonld'
+    in_PATH = 'samples/maDMP1.json'
+    out_PATH = 'transformation1b.jsonld'
 
     RCC = RO_Crate_constructor(in_PATH)
     rocrate = RCC.construct()

@@ -1,0 +1,83 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        },
+        {
+            "@id": "https://doi.org/10.5281/zenodo.3757932",
+            "@type": "File",
+            "encodingFormat": "RDA ma-DMP",
+            "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&id=1617",
+            "path": "samples/maDMP4.json",
+            "name": "World Development Indicators Visualization DMP",
+            "description": "Data Management Plan for the project World Development Indicators Visualization Dashboard.",
+            "dateCreated": "2020-04-20 12:00",
+            "Language": "eng",
+            "dateModified": "2020-04-20 10:00"
+        },
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0001-9554-5684",
+            "name": "Ghaith Arfaoui",
+            "email": "ghaith.17@gmail.com"
+        },
+        {
+            "@type": "Organization",
+            "name": "World Development Indicators Visualization Dashboard",
+            "description": "The project consists of analyzing a dataset using visual and statistical means in order to discover/find insights in it and then building an interactive visualization dashboard that can be used to analyze the discovered insights.",
+            "startDate": "2020-02-01",
+            "endDate": "2020-04-20",
+            "funder": [
+                {
+                    "@id": null
+                }
+            ]
+        },
+        {
+            "@type": "Organisation"
+        },
+        {
+            "@id": "https://doi.org/10.5281/zenodo.1039839",
+            "@type": "File",
+            "encodingFormat": "raw data",
+            "name": "GapMinder",
+            "description": "Gapminder represents a resource of several datasets containing information about (almost) all countries around the world over the last two centuries.",
+            "Language": "eng",
+            "dateCreated": "2017-10-31",
+            "URL": "https://www.gapminder.org/data/",
+            "downloadUrl": "https://www.gapminder.org/data/",
+            "license": [
+                {
+                    "@id": "https://zenodo.org/record/1039839",
+                    "@type": "CreativeWork",
+                    "startDate": "2017-10-31"
+                }
+            ]
+        },
+        {
+            "@id": "https://doi.org/10.5281/zenodo.3757329",
+            "@type": "File",
+            "encodingFormat": "merged data",
+            "description": "The data consists of multiple \"Gapminder World\" datasets merged together. Gapminder provides several datasets containing information about (almost) all countries around the world over the last two centuries.\nThe transformation consists of merging the CSV files and correcting the country and the region names when necessary.",
+            "Language": "eng",
+            "dateCreated": "2020-04-19",
+            "URL": "https://github.com/GhaithArf/visualisation-dashboard/tree/master/data/merged",
+            "downloadUrl": "https://github.com/GhaithArf/visualisation-dashboard/tree/master/data/merged",
+            "license": [
+                {
+                    "@id": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "@type": "CreativeWork",
+                    "startDate": "2020-05-02"
+                }
+            ]
+        }
+    ]
+}
