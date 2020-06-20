@@ -10,9 +10,11 @@
 * [x] Get example 10 maDMPs (5/5)
 * [x] Get example 5 ro-crates
 * [x] Create Mappings (both directions necessary?)
-* [ ] DMP to RO-Crate (10x)
+* [x] DMP to RO-Crate (10x)
 * [ ] RO-Crate to DMP (5x)
 * [ ] Validate generated maDMP against provided JSON schema
+* [ ] Make 'manual' comparisons of transformations
+* [ ] cleanup TODOs
 * [ ] Beautify Github
 * [ ] License
 * [ ] README (table mapping, any assumptions)
