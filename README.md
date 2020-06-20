@@ -61,6 +61,7 @@ A valid RO-Crate JSON-LD graph MUST describe:
 ## DMP -> RO-Crate
 * DMP (contains Project, Funding, Contact, ...)
     - title -> schema:name
+    - dmp_id -> schema:identifier
     - created -> schema:dateCreated
     - description -> schema:description
     - language -> schema:Language ?
