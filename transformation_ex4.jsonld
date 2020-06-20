@@ -1,0 +1,47 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        },
+        {
+            "@id": "https://doi.org/10.0000/00.0.1234",
+            "@type": "File",
+            "encodingFormat": "RDA ma-DMP",
+            "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&id=1617",
+            "path": "samples/ex4-dataset-embargo.json",
+            "name": "Embargo DMP",
+            "description": "Data will be shared after two years (embargo)",
+            "dateCreated": "2018-07-23T10:10:23.6",
+            "Language": "eng",
+            "dateModified": "2019-02-22T15:10:56.9"
+        },
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0000-0000-0000",
+            "name": "Tomasz Miksa",
+            "email": "TMiksa@sba-research.org"
+        },
+        {
+            "@id": "10.5281/zenodo.1200361",
+            "@type": "File",
+            "encodingFormat": "document",
+            "description": "Data which shows...",
+            "dateCreated": "2019-06-30",
+            "license": [
+                {
+                    "@id": "https://creativecommons.org/licenses/by/4.0/",
+                    "@type": "CreativeWork",
+                    "startDate": "2021-06-30"
+                }
+            ]
+        }
+    ]
+}

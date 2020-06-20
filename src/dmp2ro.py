@@ -297,8 +297,13 @@ class RO_Crate_constructor:
 
 # MAIN
 if __name__ == "__main__":
-    in_PATH = 'samples/maDMP5.json'
-    out_PATH = 'transformation5.jsonld'
+    ex1 = 'samples/ex1-header-fundedProject.json'
+    ex2 = 'samples/ex2-dataset-planned.json'
+    ex3 = 'samples/ex3-dataset-finished.json'
+    ex4 = 'samples/ex4-dataset-embargo.json'
+    ex9 = 'samples/ex9-dmp-long.json'
+    in_PATH = ex9
+    out_PATH = 'transformation_ex9.jsonld'
 
     RCC = RO_Crate_constructor(in_PATH)
     rocrate = RCC.construct()

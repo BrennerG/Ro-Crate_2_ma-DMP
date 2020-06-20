@@ -1,0 +1,52 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        },
+        {
+            "@id": "https://doi.org/10.0000/00.0.1234",
+            "@type": "File",
+            "encodingFormat": "RDA ma-DMP",
+            "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&id=1617",
+            "path": "samples/ex1-header-fundedProject.json",
+            "name": "Funded DMP",
+            "description": "Example of a DMP header for a funded project.",
+            "dateCreated": "2018-07-23T10:10:23.6",
+            "Language": "eng",
+            "dateModified": "2019-02-06T15:30:42.1"
+        },
+        {
+            "@type": "Person",
+            "@id": "http://orcid.org/0000-0000-0000-0000",
+            "name": "Charlie Chaplin",
+            "email": "cc@example.com"
+        },
+        {
+            "@type": "Organization",
+            "name": "Making maDMPs awesome",
+            "startDate": "2017-01-01",
+            "endDate": "2020-12-31",
+            "funder": [
+                {
+                    "@id": null
+                }
+            ]
+        },
+        {
+            "@type": "Organisation"
+        },
+        {
+            "@id": "https://hdl.handle.net/11353/10.923628",
+            "@type": "File",
+            "license": []
+        }
+    ]
+}
