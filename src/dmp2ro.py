@@ -71,8 +71,6 @@ class RO_Crate_constructor:
         name = self.check('name', self.CONTACT)
         email = self.check('mbox', self.CONTACT)
 
-        # TODO additional attributes?
-
         return {
             "@type": "Person",
             "@id": orcid,
@@ -151,46 +149,6 @@ class RO_Crate_constructor:
             })
         
         return entities
-
-    def extract_project_funding(self):
-        entities = []
-
-        for proj in self.PROJECT:
-
-            # extract project information
-            title = self.check('title', proj)
-            description = self.check('description', proj)
-            start = self.check('start', proj)
-            end = self.check('end', proj)
-
-            # extract funding information
-            funder_id = self.check('funder_id', proj, 'funding')
-
-            # append project
-            entities.append({
-                # TODO what about the project id -> dmp_id???
-                # "@id": "https://eresearch.uts.edu.au/projects/provisioner",
-                "@type": "Organization",
-                "name": title,
-                "description": description,
-                "startDate": start,
-                "endDate": end,
-                "funder": [
-                    {
-                    "@id": funder_id
-                    }
-                ]
-            })
-
-            # append funder
-            entities.append({
-                "@id": funder_id,
-                "@type": "Organisation",
-                # TODO is there really no funders name in madmp ?!
-                # "name": "University of Technology Sydney"
-            })
-
-            return entities
 
     def extract_contributors(self):
         pass
