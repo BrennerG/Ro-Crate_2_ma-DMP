@@ -1,4 +1,5 @@
 import json
+import sys
 
 class RO_Crate_constructor:
 
@@ -10,8 +11,13 @@ class RO_Crate_constructor:
         # LOCATIONS
         self.BASE = self.maDMP
         self.CONTACT = self.maDMP['contact']
-        self.PROJECT = self.maDMP['project']
-        self.DATASET = self.maDMP['dataset']
+
+        if 'project' in self.maDMP:
+            self.PROJECT = self.maDMP['project']
+
+        if 'dataset' in self.maDMP:
+            self.DATASET = self.maDMP['dataset']
+
 
     def read(self, path:str):
         with open(path) as json_file:
@@ -31,13 +37,20 @@ class RO_Crate_constructor:
             ]
         }
 
-    def add(self, entity):
-        # TODO append only not Nones
+    def add(self, entity, clean=True):
         if type(entity) == dict:
-            self.RO_Crate['@graph'].append(entity)
+            if clean:
+                clean = {}
+                for k in entity:
+                    if type(k) != dict and entity[k] != None:
+                        clean[k] = entity[k]
+                self.RO_Crate['@graph'].append(clean)
+            else:
+                self.RO_Crate['@graph'].append(entity)
         elif type(entity) == list:
             for ent in entity:
-                self.RO_Crate['@graph'].append(ent)
+                self.add(ent)
+
 
     def check(self, key:str, pos:dict, l2_pos:str=None):
         if l2_pos:
@@ -50,6 +63,7 @@ class RO_Crate_constructor:
                 # TODO more precise location output
                 print("WARNING: could not find", key)
     
+
     def extract_contact(self):
         orcid = self.check('identifier', self.CONTACT['contact_id'])
         name = self.check('name', self.CONTACT)
@@ -79,9 +93,9 @@ class RO_Crate_constructor:
         return {
             "@id": dmp_id,
             "@type": "File",
-            "path": self.PATH,
             "encodingFormat": "RDA ma-DMP",
             "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&id=1617",
+            "path": self.PATH,
             "name": title,
             "description": description,
             "dateCreated": created,
@@ -101,7 +115,7 @@ class RO_Crate_constructor:
             end = self.check('end', proj)
 
             # extract funding information
-            funder_id = self.check('funder_id', proj['funding'])
+            funder_id = self.check('funder_id', proj, 'funding')
 
             # append project
             entities.append({
@@ -222,9 +236,11 @@ class RO_Crate_constructor:
 
 # MAIN
 if __name__ == "__main__":
-    PATH = 'samples/maDMP1.json'
-    RCC = RO_Crate_constructor(PATH)
+    in_PATH = 'samples/maDMP3.json'
+    out_PATH = 'transformation3.jsonld'
+
+    RCC = RO_Crate_constructor(in_PATH)
     rocrate = RCC.construct()
-    RCC.write()
+    RCC.write(out_PATH)
 
     print("DONE")

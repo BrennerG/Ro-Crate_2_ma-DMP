@@ -1,0 +1,74 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        },
+        {
+            "@id": "10.5281/zenodo.3758547",
+            "@type": "File",
+            "encodingFormat": "RDA ma-DMP",
+            "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&id=1617",
+            "path": "samples/maDMP3.json",
+            "name": "Hypertree Decompositions for Query Optimization in Postgres",
+            "description": "Development and Benchmark of a new strategy for query execution. The data is collected for the purpose of benchmarking the new, optimized queries and measure the effectiveness of the technique against the default postgres\noptimizer",
+            "dateCreated": "2020-04-13T22:20:00.0",
+            "Language": "eng",
+            "dateModified": "2020-04-20T22:00:00.0"
+        },
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0002-6867-5448\n",
+            "name": "Alexander Selzer",
+            "email": "aselzer3@gmail.com"
+        },
+        {
+            "@type": "Organization",
+            "name": "Hypertree Decompositions for Query Optimization in Postgres",
+            "startDate": "2019-07-01",
+            "endDate": "2020-11-01",
+            "funder": [
+                {
+                    "@id": null
+                }
+            ]
+        },
+        {
+            "@type": "Organisation"
+        },
+        {
+            "@id": "https://github.com/arselzer/HTQueryOptimizer",
+            "@type": "File",
+            "encodingFormat": "software",
+            "description": "Proof of concept implementation",
+            "dateCreated": "2020-04-13",
+            "license": [
+                {
+                    "@id": "https://opensource.org/licenses/MIT",
+                    "@type": "CreativeWork",
+                    "startDate": "2020-01-01"
+                }
+            ]
+        },
+        {
+            "@id": "10.5281/zenodo.3750265",
+            "@type": "File",
+            "encodingFormat": "data",
+            "description": "Data produced by a run of the benchmarking tool. Note however that this result is exemplary for the purposes of the exercise and not finally used for the thesis",
+            "license": [
+                {
+                    "@id": "https://opensource.org/licenses/MIT",
+                    "@type": "CreativeWork",
+                    "startDate": "2020-01-01"
+                }
+            ]
+        }
+    ]
+}
