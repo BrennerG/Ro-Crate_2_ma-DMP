@@ -20,6 +20,9 @@ class RO_Crate_constructor:
         if 'dataset' in self.maDMP:
             self.DATASET = self.maDMP['dataset']
 
+        if 'contributor' in self.maDMP:
+            self.CONTRIBUTOR = self.maDMP['contributor']
+
 
     def read(self, path:str):
         with open(path) as json_file:
@@ -44,7 +47,7 @@ class RO_Crate_constructor:
             if clean:
                 clean = {}
                 for k in entity:
-                    if type(k) != dict and entity[k] != None:
+                    if type(k) != dict and entity[k] != None and len(entity) > 1:
                         clean[k] = entity[k]
                 self.RO_Crate['@graph'].append(clean)
             else:
@@ -55,14 +58,13 @@ class RO_Crate_constructor:
 
 
     def check(self, key:str, pos:dict, l2_pos:str=None):
-        if l2_pos:
+        if l2_pos and pos:
             if l2_pos in pos and key in pos[l2_pos]:
                 return pos[l2_pos][key]
         else:
-            if key in pos:
+            if pos and key in pos:
                 return pos[key]
             else:
-                # TODO more precise location output
                 print("WARNING: could not find", key)
     
 
@@ -86,9 +88,9 @@ class RO_Crate_constructor:
         language = self.check('language', self.BASE)
         modified = self.check('modified', self.BASE)
 
-        # TODO where to put these 2?
-        ethical_issues_description = self.check('ethical_issues_description', self.BASE)
-        ethical_issues_exist = self.check('ethical_issues_exist', self.BASE)
+        # TODO where to put:
+        # ethical_issues_description = self.check('ethical_issues_description', self.BASE)
+        # ethical_issues_exist = self.check('ethical_issues_exist', self.BASE)
 
         return {
             "@id": dmp_id,
@@ -126,8 +128,6 @@ class RO_Crate_constructor:
 
             # append project
             entities.append({
-                # TODO what about the project id -> dmp_id???
-                # "@id": "https://eresearch.uts.edu.au/projects/provisioner",
                 "@type": "Organization",
                 "name": title,
                 "description": description,
@@ -144,17 +144,21 @@ class RO_Crate_constructor:
             entities.append({
                 "@id": funder_id,
                 "@type": "Organisation",
-                # TODO is there really no funders name in madmp ?!
-                # "name": "University of Technology Sydney"
             })
         
         return entities
 
     def extract_contributors(self):
-        pass
+        contributors = []
 
-    def extract_cost(self):
-        pass
+        for con in self.CONTRIBUTOR:
+            contributors.append({
+                "@type": "Person",
+                "@id": self.check('identifier', con, 'contributor_id'),
+                "name": self.check('name', con),
+                "email": self.check('email', con),
+                "Role": self.check('role', con)
+            })
 
     def extract_dataset(self):
         entities = []
@@ -168,17 +172,14 @@ class RO_Crate_constructor:
             description = self.check('description', dset)
             issued = self.check('issued', dset)
             language = self.check('language', dset)
+            keywords = self.check('keywords', dset)
+            # TODO where to put:
+            # sensitive_data = self.check('sensitive_data', dset)
+            # personal_data = self.check('personal_data', dset)
+            # preservation_statement = self.check('preservation_statement', dset)
+            # data_quality_assurance = self.check('data_quality_assurance ', dset)
 
-            # TODO what to do with these entries?
-            sensitive_data = self.check('sensitive_data', dset)
-            personal_data = self.check('personal_data', dset)
-            preservation_statement = self.check('preservation_statement', dset)
-            data_quality_assurance = self.check('data_quality_assurance ', dset)
-            # TODO https://researchobject.github.io/ro-crate/1.0/#subjects--keywords
-            keyword = self.check('keyword', dset)
-
-            # distribution attributes (dropped: description, data_access, format)
-            dist_title = self.check('title', dset, 'distribution')
+            # distribution attributes (dropped: description, data_access, format, title)
             access_url = self.check('access_url', dset, 'distribution')
             download_url = self.check('download_url', dset, 'distribution')
             available_until = self.check('available_until', dset, 'distribution')
@@ -206,21 +207,33 @@ class RO_Crate_constructor:
                         "startDate": start_date
                     })
 
- 
-            # TODO metadata
-            # TODO host
-            # TODO security and privacy
-            # TODO technical resource
+            # metadata attributes
+            metadata = self.check('metadata', dset)
+            metad_description = self.check('description', metadata)
+            metad_language = self.check('language', metadata)
+            metad_encodingFormat= self.check('identifier', metadata, 'metadata_standard_id')
+
+            # host attributes
+            host = self.check('host', dset)
+            host_url = self.check('host_url', host)
+            host_title = self.check('host_title', host)
+            host_description = self.check('host_description', host)
+            host_geo_location = self.check('host_geo_location', host)
+            # TODO where to put:
+            # host_availability = self.check('host_availability', host)
+            # host_backup_frequency = self.check('host_backup_frequency', host) 
+            # host_backup_type = self.check('host_backup_type', host)
+            # host_certified_with = self.check('host_certified_with', host)
+            # host_pid_system = self.check('host_pid_system', host)
+            # host_storage_type = self.check('host_storage_type', host)
+            # host_support_versioning = self.check('host_support_versioning', host)
 
             # append datasets
             entities.append({
                 "@id": dataset_id,
-                # TODO distinguish Files from Folders
-                "@type": "File",
-                # TODO more like this: "encodingFormat": ["text/plain", {"@id": "https://www.commonwl.org/v1.0/Workflow.html"}]
+                "@type": "Dataset",
                 "encodingFormat": dtype,
-                # TODO really take the dist title and not the dataset title?
-                "name": dist_title,
+                "name": title,
                 "description": description,
                 "contentSize": byte_size,
                 "Language" : language,
@@ -229,13 +242,22 @@ class RO_Crate_constructor:
                 "downloadUrl": download_url,
                 "endDate": available_until,
                 "license": licenses,
-                # 'metadata': {
-                    #"@id": "pics/2017-06-11%2012.56.14.jpg",
-                    #"@type": "File",
-                    #"encodingFormat": "image/jpeg",
-                    #"Language": metadata_language,
-                    #"description": "Depicts a fence at a disused motor racing venue with the front part of a slightly out of focus black dog in the foreground.",
-                #},
+                "keywords": keywords,
+                'metadata': {
+                    "@type": "File",
+                    "encodingFormat": metad_encodingFormat,
+                    "Language": metad_language,
+                    "description": metad_description
+                },
+            })
+
+            # append repositories
+            entities.append({
+                "@id": host_url,
+                "@type": "RepositoryCollection",
+                "title":  host_title,   
+                "description": host_description,
+                "location" : host_geo_location,
             })
 
         return entities
@@ -244,8 +266,7 @@ class RO_Crate_constructor:
         self.add(self.extract_dmp_base())
         self.add(self.extract_contact())
         self.add(self.extract_project_funding_R())
-        # TODO contributors
-        # TODO cost -> no equivalence in RO-Crate
+        self.add(self.extract_contributors())
         self.add(self.extract_dataset())
         return self.RO_Crate
 

@@ -1,0 +1,111 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        },
+        {
+            "@id": "https://doi.org/10.0000/00.0.1234",
+            "@type": "File",
+            "encodingFormat": "RDA ma-DMP",
+            "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&id=1617",
+            "path": "samples/ex9-dmp-long.json",
+            "name": "DMP for our new project",
+            "description": "This DMP is for our new project.",
+            "dateCreated": "2019-12-06T11:33:05.619Z",
+            "Language": "eng",
+            "dateModified": "2019-12-06T11:33:05.619Z"
+        },
+        {
+            "@type": "Person",
+            "@id": "https://www.tiss.tuwien.ac.at/person/2351952424",
+            "name": "John Smith",
+            "email": "john.smith@tuwien.ac.at"
+        },
+        {
+            "@type": "Organization",
+            "name": "openEO - a common, open source interface between Earth Observation data infrastructures and front-end applications",
+            "description": "<p>The capabilities of the latest generation of Earth observation satellites to collect large volumes of diverse and thematically rich data are unprecedented. For exploiting these valuable data sets, many research and industry groups have started to shift their processing into the cloud. Although the functionalities of existing cloud computing solutions largely overlap, there are all custom-made and tailored to the specific data infrastructures. This lack of standards not only makes it hard for end users and application developers to develop generic front-ends, but also to compare the cloud offerings by running the same analysis against different cloud back-ends. To solve this, a common interface that allows end- and intermediate users to query cloud-based back offices and carry out computations on them in a simple way is needed. The openEO project will design such an interface, implement it as an open source community project, bind it to generic analytics front-ends and evaluate it against a set of relevant Earth observation cloud back offices. The openEO interface will consist of three layers of Application Programming Interfaces, namely a core API for finding, accessing, and processing large datasets, a driver APIs to connect to back offices operated by European and worldwide industry, and client APIs for analysing these datasets using R, Python and JavaScript. To demonstrate the capability of the openEO interface, four use cases based chiefly on Sentinel-1 and Sentinel-2 time series will be implemented. openEO will simplify the use of cloud-based processing engines, allow switching between cloud-based back office providers and comparing them, and enable reproducible, open Earth observation science. Thereby, openEO reduces the entry barriers for the adaptation of cloud computing technologies by a broad user community and paves the way for the federation of infrastructure capabilities.</p><p> </p>",
+            "startDate": "2017-10-01",
+            "endDate": "2020-09-30",
+            "funder": [
+                {
+                    "@id": null
+                }
+            ]
+        },
+        {
+            "@type": "Organisation"
+        },
+        {
+            "@id": "https://hdl.handle.net/0000/00.00000",
+            "@type": "Dataset",
+            "encodingFormat": "Source code",
+            "name": "Client application",
+            "description": "Some test scripts",
+            "license": [
+                {
+                    "@id": "http://opensource.org/licenses/mit-license.php",
+                    "@type": "CreativeWork",
+                    "startDate": "2020-09-30"
+                }
+            ],
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@type": "RepositoryCollection"
+        },
+        {
+            "@id": "https://hdl.handle.net/0000/00.00000",
+            "@type": "Dataset",
+            "encodingFormat": "Images",
+            "name": "Image collection",
+            "description": "Images of test object X",
+            "license": [],
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@type": "RepositoryCollection"
+        },
+        {
+            "@id": "https://hdl.handle.net/0000/00.00000",
+            "@type": "Dataset",
+            "encodingFormat": "other",
+            "name": "Interviews",
+            "description": "Audio recordings with test persons",
+            "license": [
+                {
+                    "@id": "http://creativecommons.org/licenses/by/4.0/",
+                    "@type": "CreativeWork",
+                    "startDate": "2021-01-01"
+                }
+            ],
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@type": "RepositoryCollection"
+        }
+    ]
+}

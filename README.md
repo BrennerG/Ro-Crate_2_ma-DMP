@@ -14,9 +14,10 @@
 * [x] RO-Crate to DMP (5x)
 * [ ] Validate generated maDMP against provided JSON schema
 * [ ] Make 'manual' comparisons of transformations
-* [ ] cleanup TODOs
+* [x] cleanup TODOs
+* [ ] create CLIent
 * [ ] Beautify Github
-* [ ] License
+* [x] License
 * [ ] README (table mapping, any assumptions)
 * [ ] Zenodo
 
