@@ -12,10 +12,11 @@
 * [x] Create Mappings (both directions necessary?)
 * [x] DMP to RO-Crate (10x)
 * [x] RO-Crate to DMP (5x)
+* [x] cleanup TODOs
+* [x] create CLIent
 * [ ] Validate generated maDMP against provided JSON schema
 * [ ] Make 'manual' comparisons of transformations
-* [x] cleanup TODOs
-* [ ] create CLIent
+* [ ] produce clean output
 * [ ] Beautify Github
 * [x] License
 * [ ] README (table mapping, any assumptions)

@@ -19,9 +19,13 @@ class RO_Crate_constructor:
 
         if 'dataset' in self.maDMP:
             self.DATASET = self.maDMP['dataset']
+        else:
+            self.DATASET = []
 
         if 'contributor' in self.maDMP:
             self.CONTRIBUTOR = self.maDMP['contributor']
+        else:
+            self.CONTRIBUTOR = []
 
 
     def read(self, path:str):
