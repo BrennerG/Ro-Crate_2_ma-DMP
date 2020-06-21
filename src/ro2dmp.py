@@ -12,6 +12,10 @@ class DMP_Constructor:
             data = json.load(json_file)
             return data['@graph']
 
+    def write(self, output_PATH:str="ma_DMP.json"):
+        with open(output_PATH, 'w') as file:
+            json.dump(self.dmp, file)
+
     def check(self, key:str, pos:dict, l2_pos:str=None):
         if l2_pos:
             if l2_pos in pos and key in pos[l2_pos]:
@@ -23,13 +27,16 @@ class DMP_Constructor:
                 # TODO more precise location output
                 print("WARNING: could not find", key)
     
+    # TODO add-method for null-checking
+
     def construct(self):
         self.dmp = self.dmp_skeleton()
-        self.set_base_attributes()
+        # TODO self.set_base_attributes()
         person_list = self.extract_people()
-        self.dmp['contact']  = person_list[0]
-        self.dmp['contributors'] = person_list[1:]
-        self.dmp['dataset'] = self.extract_dataset()
+        self.dmp['dmp']['contact']  = person_list[0]
+        self.dmp['dmp']['contributor'] = person_list[1:]
+        self.dmp['dmp']['dataset'] = self.extract_dataset()
+        self.dmp['dmp']['project'] = self.extract_project()
     
     def dmp_skeleton(self):
         return {
@@ -86,7 +93,22 @@ class DMP_Constructor:
         return contributors
 
     def extract_project(self):
-        pass
+        projects = []
+        for entity in self.RO_Crate:
+            if '@type' in entity and (entity['@type'] == 'Project' or (entity['@type'] == 'Organization' and 'funder' in entity)):
+                # FROM RO-CRATE @id, @type, description, identifier, name
+                # MISSING FROM DMP start, funding_status, grant_id
+                projects.append({
+                    'title' : self.check('title', entity),
+                    'description' : self.check('description', entity),
+                    'funding' : {
+                        'funder_id' : {
+                            'identifier' : self.check('@id', entity, 'funder'),
+                            'type' : 'doi' # TODO create checking function
+                        }
+                    }
+                })
+
 
     def extract_dataset(self):
         data = []
@@ -116,9 +138,10 @@ if __name__ == "__main__":
     ro1 = 'samples/ro-crate-metadata1.jsonld' 
     ro2 = 'samples/ro-crate-metadata2.jsonld' 
     ro3 = 'samples/ro-crate-metadata3.jsonld' 
-    out = 'transformation1.jsonld'
+    out = 'transformation3.jsonld'
 
-    DC = DMP_Constructor(ro1)
+    DC = DMP_Constructor(ro3)
     DC.construct()
+    DC.write(out)
 
     print("DONE")

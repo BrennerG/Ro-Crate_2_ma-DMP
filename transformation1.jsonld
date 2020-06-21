@@ -1,0 +1,89 @@
+{
+    "dmp": {
+        "title": null,
+        "dmp_id": null,
+        "created": null,
+        "description": null,
+        "language": null,
+        "modified": null,
+        "ethical_issues_description": null,
+        "ethical_issues_exist": null,
+        "contact": {
+            "contact_id": {
+                "type": "orcid",
+                "identifier": "https://email.itd.uts.edu.au/webapps/directory/entry.mason?entry=dWlkPTExODAyNSxvdT1TdGFmZixvPXV0cy5lZHUuYXUsbz1VVFM="
+            },
+            "mbox": "duncan.loxton@uts.edu.au",
+            "name": "Duncan Loxton"
+        },
+        "contributor": [
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "https://orcid.org/0000-0001-5152-5307"
+                },
+                "mbox": "michael.lynch@uts.edu.au",
+                "name": "Michael Lynch"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "https://orcid.org/0000-0001-7677-780X"
+                },
+                "mbox": "sharyn.wise@uts.edu.au",
+                "name": "Sharyn Wise"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "https://orcid.org/0000-0001-9903-7716"
+                },
+                "mbox": "christian.evenhuis@uts.edu.au",
+                "name": "Christian"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "https://orcid.org/0000-0002-0074-112X"
+                },
+                "mbox": "g.devine@wsu.edu.au",
+                "name": "Gerard Devine"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "https://orcid.org/0000-0002-3545-944X"
+                },
+                "mbox": "peter.sefton@uts.edu.au",
+                "name": "Peter Sefton"
+            }
+        ],
+        "project": null,
+        "dataset": [
+            {
+                "title": "DataCrate Submisssion to the Workshop on Research Objects (RO2018)",
+                "type": null,
+                "dataset_id": {
+                    "identifier": "https://doi.org/10.5281/zenodo.1445817",
+                    "type": "doi"
+                },
+                "description": "This is an example DataCrate package for submissing a paper/presentation proposal to Research Object 2018.",
+                "issued": "2018-07-15",
+                "keyword": null,
+                "language": null
+            },
+            {
+                "title": "Source files",
+                "type": null,
+                "dataset_id": {
+                    "identifier": "data/src",
+                    "type": "doi"
+                },
+                "description": "Markdown source , metadata and template files",
+                "issued": null,
+                "keyword": null,
+                "language": null
+            }
+        ]
+    }
+}

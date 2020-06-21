@@ -1,0 +1,133 @@
+{
+    "dmp": {
+        "title": null,
+        "dmp_id": null,
+        "created": null,
+        "description": null,
+        "language": null,
+        "modified": null,
+        "ethical_issues_description": null,
+        "ethical_issues_exist": null,
+        "contact": {
+            "contact_id": {
+                "type": "orcid",
+                "identifier": "0bdb2fb6-a787-4f51-bfde-58e78c67ccb6"
+            },
+            "mbox": null,
+            "name": "Jennifer Houltram"
+        },
+        "contributor": [
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "ea615e1b-2238-471a-bca1-eb71dc18cef8"
+                },
+                "mbox": null,
+                "name": "Janet Cook"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://nla.gov.au/nla.party-1509834"
+                },
+                "mbox": null,
+                "name": "Patricia M Davidson"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://orcid.org/0000-0001-6121-5409"
+                },
+                "mbox": null,
+                "name": "Tim Luckett"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://orcid.org/0000-0001-6520-4213"
+                },
+                "mbox": null,
+                "name": "Dimity Pond"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://orcid.org/0000-0001-6611-6565"
+                },
+                "mbox": null,
+                "name": "Stephen Goodall"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://orcid.org/0000-0001-7817-6821"
+                },
+                "mbox": null,
+                "name": "Geoffrey Mitchell"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://orcid.org/0000-0002-1783-9289"
+                },
+                "mbox": null,
+                "name": "Lynnette Chenoweth"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://orcid.org/0000-0002-3691-8230"
+                },
+                "mbox": null,
+                "name": "Jane Phillips"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://orcid.org/0000-0002-4767-5131"
+                },
+                "mbox": null,
+                "name": "Georgina Luscombe"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://orcid.org/0000-0002-6756-6119"
+                },
+                "mbox": null,
+                "name": "Meera Agar"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://orcid.org/0000-0002-9779-0605"
+                },
+                "mbox": null,
+                "name": "Elizabeth Beattie"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://orcid.org/0000-0003-4902-0654"
+                },
+                "mbox": null,
+                "name": "Deborah Brooks"
+            }
+        ],
+        "project": null,
+        "dataset": [
+            {
+                "title": "Data files associated with the manuscript:Effects of facilitated family case conferencing for advanced dementia: A cluster randomised clinical trial",
+                "type": null,
+                "dataset_id": {
+                    "identifier": "http://doi.org/10.4225/59/59672c09f4a4b",
+                    "type": "doi"
+                },
+                "description": "Palliative care planning for nursing home residents with advanced dementia is often suboptimal. This study compared effects of facilitated case conferencing (FCC) with usual care (UC) on end-of-life care",
+                "issued": "42928",
+                "keyword": null,
+                "language": null
+            }
+        ]
+    }
+}

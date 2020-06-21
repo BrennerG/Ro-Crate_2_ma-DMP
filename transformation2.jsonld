@@ -1,0 +1,57 @@
+{
+    "dmp": {
+        "title": null,
+        "dmp_id": null,
+        "created": null,
+        "description": null,
+        "language": null,
+        "modified": null,
+        "ethical_issues_description": null,
+        "ethical_issues_exist": null,
+        "contact": {
+            "contact_id": {
+                "type": "orcid",
+                "identifier": "http://nla.gov.au/anbd.aut-an35048773"
+            },
+            "mbox": null,
+            "name": "Deborah Chambers"
+        },
+        "contributor": [
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://nla.gov.au/anbd.aut-an35985847"
+                },
+                "mbox": null,
+                "name": "Carol Liston"
+            },
+            {
+                "contact_id": {
+                    "type": "orcid",
+                    "identifier": "http://nla.gov.au/anbd.aut-an35698019"
+                },
+                "mbox": null,
+                "name": "Christine Wieneke"
+            }
+        ],
+        "project": null,
+        "dataset": [
+            {
+                "title": "Farms to Freeways Example Dataset",
+                "type": null,
+                "dataset_id": {
+                    "identifier": "https://dx.doi.org/10.4225/35/555d661071c76",
+                    "type": "doi"
+                },
+                "description": [
+                    "This data set was exported from an Omeka Repository as an example of a DataCrate. It contains the Collections and Items from the repository but does NOT have the exhibitions. The DOI resolves to an archive of the data elsewhere"
+                ],
+                "issued": [
+                    "2015"
+                ],
+                "keyword": null,
+                "language": null
+            }
+        ]
+    }
+}
