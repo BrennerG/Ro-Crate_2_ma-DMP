@@ -11,7 +11,7 @@
 * [x] Get example 5 ro-crates
 * [x] Create Mappings (both directions necessary?)
 * [x] DMP to RO-Crate (10x)
-* [ ] RO-Crate to DMP (5x)
+* [x] RO-Crate to DMP (5x)
 * [ ] Validate generated maDMP against provided JSON schema
 * [ ] Make 'manual' comparisons of transformations
 * [ ] cleanup TODOs
