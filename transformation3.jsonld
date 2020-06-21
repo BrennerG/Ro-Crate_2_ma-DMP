@@ -1,17 +1,17 @@
 {
     "dmp": {
-        "title": null,
-        "dmp_id": null,
-        "created": null,
-        "description": null,
+        "title": "Machine-Actionable Data Management Plan",
+        "dmp_id": "PLEASE REGISTER A DOI",
+        "created": "2020/06/21",
+        "description": "This is a machine-generated maDMP. Please fill out missing fields according to RDA maDMP standards.",
         "language": null,
-        "modified": null,
+        "modified": "2020/06/21",
         "ethical_issues_description": null,
         "ethical_issues_exist": null,
         "contact": {
             "contact_id": {
-                "type": "orcid",
-                "identifier": "0bdb2fb6-a787-4f51-bfde-58e78c67ccb6"
+                "identifier": "0bdb2fb6-a787-4f51-bfde-58e78c67ccb6",
+                "type": "other"
             },
             "mbox": null,
             "name": "Jennifer Houltram"
@@ -19,102 +19,103 @@
         "contributor": [
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "ea615e1b-2238-471a-bca1-eb71dc18cef8"
+                    "identifier": "ea615e1b-2238-471a-bca1-eb71dc18cef8",
+                    "type": "other"
                 },
                 "mbox": null,
                 "name": "Janet Cook"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://nla.gov.au/nla.party-1509834"
+                    "identifier": "http://nla.gov.au/nla.party-1509834",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Patricia M Davidson"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://orcid.org/0000-0001-6121-5409"
+                    "identifier": "http://orcid.org/0000-0001-6121-5409",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Tim Luckett"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://orcid.org/0000-0001-6520-4213"
+                    "identifier": "http://orcid.org/0000-0001-6520-4213",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Dimity Pond"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://orcid.org/0000-0001-6611-6565"
+                    "identifier": "http://orcid.org/0000-0001-6611-6565",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Stephen Goodall"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://orcid.org/0000-0001-7817-6821"
+                    "identifier": "http://orcid.org/0000-0001-7817-6821",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Geoffrey Mitchell"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://orcid.org/0000-0002-1783-9289"
+                    "identifier": "http://orcid.org/0000-0002-1783-9289",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Lynnette Chenoweth"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://orcid.org/0000-0002-3691-8230"
+                    "identifier": "http://orcid.org/0000-0002-3691-8230",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Jane Phillips"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://orcid.org/0000-0002-4767-5131"
+                    "identifier": "http://orcid.org/0000-0002-4767-5131",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Georgina Luscombe"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://orcid.org/0000-0002-6756-6119"
+                    "identifier": "http://orcid.org/0000-0002-6756-6119",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Meera Agar"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://orcid.org/0000-0002-9779-0605"
+                    "identifier": "http://orcid.org/0000-0002-9779-0605",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Elizabeth Beattie"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://orcid.org/0000-0003-4902-0654"
+                    "identifier": "http://orcid.org/0000-0003-4902-0654",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Deborah Brooks"
             }
         ],
-        "project": null,
+        "cost": [],
+        "project": [],
         "dataset": [
             {
                 "title": "Data files associated with the manuscript:Effects of facilitated family case conferencing for advanced dementia: A cluster randomised clinical trial",
@@ -126,7 +127,10 @@
                 "description": "Palliative care planning for nursing home residents with advanced dementia is often suboptimal. This study compared effects of facilitated case conferencing (FCC) with usual care (UC) on end-of-life care",
                 "issued": "42928",
                 "keyword": null,
-                "language": null
+                "language": null,
+                "personal_data": null,
+                "preservation_statement": null,
+                "sensitive_data": null
             }
         ]
     }

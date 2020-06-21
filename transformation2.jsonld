@@ -1,17 +1,17 @@
 {
     "dmp": {
-        "title": null,
-        "dmp_id": null,
-        "created": null,
-        "description": null,
+        "title": "Machine-Actionable Data Management Plan",
+        "dmp_id": "PLEASE REGISTER A DOI",
+        "created": "2020/06/21",
+        "description": "This is a machine-generated maDMP. Please fill out missing fields according to RDA maDMP standards.",
         "language": null,
-        "modified": null,
+        "modified": "2020/06/21",
         "ethical_issues_description": null,
         "ethical_issues_exist": null,
         "contact": {
             "contact_id": {
-                "type": "orcid",
-                "identifier": "http://nla.gov.au/anbd.aut-an35048773"
+                "identifier": "http://nla.gov.au/anbd.aut-an35048773",
+                "type": "url"
             },
             "mbox": null,
             "name": "Deborah Chambers"
@@ -19,22 +19,23 @@
         "contributor": [
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://nla.gov.au/anbd.aut-an35985847"
+                    "identifier": "http://nla.gov.au/anbd.aut-an35985847",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Carol Liston"
             },
             {
                 "contact_id": {
-                    "type": "orcid",
-                    "identifier": "http://nla.gov.au/anbd.aut-an35698019"
+                    "identifier": "http://nla.gov.au/anbd.aut-an35698019",
+                    "type": "url"
                 },
                 "mbox": null,
                 "name": "Christine Wieneke"
             }
         ],
-        "project": null,
+        "cost": [],
+        "project": [],
         "dataset": [
             {
                 "title": "Farms to Freeways Example Dataset",
@@ -50,7 +51,10 @@
                     "2015"
                 ],
                 "keyword": null,
-                "language": null
+                "language": null,
+                "personal_data": null,
+                "preservation_statement": null,
+                "sensitive_data": null
             }
         ]
     }
