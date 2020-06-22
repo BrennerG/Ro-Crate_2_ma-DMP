@@ -42,67 +42,144 @@
             ]
         },
         {
+            "@id": null,
             "@type": "Organisation"
         },
         {
             "@id": "10.5281/zenodo.3757819",
-            "@type": "File",
+            "@type": "Dataset",
             "encodingFormat": "raw data",
+            "name": "Text message input dataset",
             "description": "The raw input data used in the experiment. Taken from Kaggle under https://www.kaggle.com/uciml/sms-spam-collection-dataset",
+            "contentSize": null,
             "Language": "eng",
             "dateCreated": "2020-04-20",
+            "URL": null,
+            "downloadUrl": null,
+            "endDate": null,
             "license": [
                 {
                     "@id": "https://www.kaggle.com/terms",
                     "@type": "CreativeWork",
                     "startDate": "2020-04-20"
                 }
-            ]
+            ],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         },
         {
             "@id": "10.5281/zenodo.3758037",
-            "@type": "File",
+            "@type": "Dataset",
             "encodingFormat": "raw data",
+            "name": "Input data after preprocessing (tokenization and vectorization) ",
             "description": "The raw data once it has been split into inputs and class labels as well as training and testing sets, which are then tokenized and vectorized for machine learning",
+            "contentSize": null,
             "Language": "eng",
             "dateCreated": "2020-04-20",
+            "URL": null,
+            "downloadUrl": null,
+            "endDate": null,
             "license": [
                 {
                     "@id": "https://creativecommons.org/licenses/by/4.0/legalcode",
                     "@type": "CreativeWork",
                     "startDate": "2020-04-20"
                 }
-            ]
+            ],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         },
         {
             "@id": "10.5281/zenodo.3758323",
-            "@type": "File",
+            "@type": "Dataset",
             "encodingFormat": "raw data",
+            "name": "Experiment output data",
             "description": "The output of the experiment, which consists of a text file containing final accuracy and loss scores, as well as two graphs showing progress of accuracy and loss over the training epochs",
+            "contentSize": null,
             "Language": "eng",
             "dateCreated": "2020-04-20",
+            "URL": null,
+            "downloadUrl": null,
+            "endDate": null,
             "license": [
                 {
                     "@id": "https://creativecommons.org/licenses/by/4.0/legalcode",
                     "@type": "CreativeWork",
                     "startDate": "2020-04-20"
                 }
-            ]
+            ],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         },
         {
             "@id": "10.5281/zenodo.3758024",
-            "@type": "File",
+            "@type": "Dataset",
             "encodingFormat": "raw data",
+            "name": "Experiment Code",
             "description": "Code of the experiment that has been run. Repository also includes necessary source data",
+            "contentSize": null,
             "Language": "eng",
             "dateCreated": "2020-04-20",
+            "URL": null,
+            "downloadUrl": null,
+            "endDate": null,
             "license": [
                 {
                     "@id": "https://creativecommons.org/licenses/by/4.0/legalcode",
                     "@type": "CreativeWork",
                     "startDate": "2020-04-20"
                 }
-            ]
+            ],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         }
     ]
 }

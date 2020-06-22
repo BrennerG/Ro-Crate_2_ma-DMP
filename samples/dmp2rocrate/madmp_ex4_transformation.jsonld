@@ -16,9 +16,9 @@
             "@type": "File",
             "encodingFormat": "RDA ma-DMP",
             "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/Format/proFormatSearch.aspx?status=detailReport&id=1617",
-            "path": "samples/ex3-dataset-finished.json",
-            "name": "DMP for a finished project",
-            "description": "Project has ended. Data is published.",
+            "path": "samples/ex4-dataset-embargo.json",
+            "name": "Embargo DMP",
+            "description": "Data will be shared after two years (embargo)",
             "dateCreated": "2018-07-23T10:10:23.6",
             "Language": "eng",
             "dateModified": "2019-02-22T15:10:56.9"
@@ -31,17 +31,37 @@
         },
         {
             "@id": "10.5281/zenodo.1200361",
-            "@type": "File",
-            "encodingFormat": "software",
-            "description": "Proof of concept implementation",
-            "dateCreated": "2019-01-30",
+            "@type": "Dataset",
+            "encodingFormat": "document",
+            "name": "Cool data",
+            "description": "Data which shows...",
+            "contentSize": null,
+            "Language": null,
+            "dateCreated": "2019-06-30",
+            "URL": null,
+            "downloadUrl": null,
+            "endDate": null,
             "license": [
                 {
                     "@id": "https://creativecommons.org/licenses/by/4.0/",
                     "@type": "CreativeWork",
-                    "startDate": "2019-01-30"
+                    "startDate": "2021-06-30"
                 }
-            ]
+            ],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         }
     ]
 }

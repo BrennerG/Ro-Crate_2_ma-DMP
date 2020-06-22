@@ -32,6 +32,7 @@
         {
             "@type": "Organization",
             "name": "Making maDMPs awesome",
+            "description": null,
             "startDate": "2017-01-01",
             "endDate": "2020-12-31",
             "funder": [
@@ -41,12 +42,36 @@
             ]
         },
         {
+            "@id": null,
             "@type": "Organisation"
         },
         {
             "@id": "https://hdl.handle.net/11353/10.923628",
-            "@type": "File",
-            "license": []
+            "@type": "Dataset",
+            "encodingFormat": null,
+            "name": "Source Code",
+            "description": null,
+            "contentSize": null,
+            "Language": null,
+            "dateCreated": null,
+            "URL": null,
+            "downloadUrl": null,
+            "endDate": null,
+            "license": [],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         }
     ]
 }

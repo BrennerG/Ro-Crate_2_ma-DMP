@@ -65,11 +65,11 @@ class RO_Crate_constructor:
 
 
     def check(self, key:str, pos:dict, l2_pos:str=None):
-        if l2_pos and pos:
+        if l2_pos and pos and l2_pos != pos:
             if l2_pos in pos and key in pos[l2_pos]:
                 return pos[l2_pos][key]
         else:
-            if pos and key in pos:
+            if pos and key != pos and key in pos:
                 return pos[key]
             else:
                 print("WARNING: could not find", key)
@@ -279,7 +279,7 @@ class RO_Crate_constructor:
 
     def write(self, output_PATH:str="ro-crate-metadata.jsonld"):
         with open(output_PATH, 'w') as file:
-            json.dump(self.RO_Crate, file)
+            json.dump(self.RO_Crate, file, indent=4)
 
 # MAIN
 if __name__ == "__main__":
@@ -294,11 +294,13 @@ if __name__ == "__main__":
     ex4 = 'samples/ex4-dataset-embargo.json'
     ex9 = 'samples/ex9-dmp-long.json'
 
-    in_PATH = madmp1
-    out_PATH = '1.jsonld'
+    dmps = [madmp1, madmp2, madmp3, madmp4, madmp5, ex1, ex2, ex3, ex4, ex9]
+    filenames = ['maDMP1_transformation.jsonld', 'madmp2_transformation.jsonld', 'madmp3_transformation.jsonld', 'madmp4_transformation.jsonld', 'madmp5_transformation.jsonld', 'madmp_ex1_transformation.jsonld', 'madmp_ex2_transformation.jsonld', 'madmp_ex3_transformation.jsonld', 'madmp_ex4_transformation.jsonld', 'madmp_ex9_transformation.jsonld']
 
-    RCC = RO_Crate_constructor(in_PATH)
-    rocrate = RCC.construct()
-    RCC.write(out_PATH)
+    for i in range(0, len(dmps)):
+        print(dmps[i])
+        RCC = RO_Crate_constructor(dmps[i])
+        rocrate = RCC.construct()
+        RCC.write(filenames[i])
 
     print("DONE")

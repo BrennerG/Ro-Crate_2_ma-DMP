@@ -15,8 +15,8 @@
 * [x] cleanup TODOs
 * [x] create CLIent
 * [ ] Validate generated maDMP against provided JSON schema
-* [ ] Make 'manual' comparisons of transformations
-* [ ] produce clean output
+* [x] Make 'manual' comparisons of transformations
+* [x] produce clean output
 * [ ] Beautify Github
 * [x] License
 * [ ] README (table mapping, any assumptions)

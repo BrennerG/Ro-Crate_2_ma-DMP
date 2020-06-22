@@ -42,40 +42,104 @@
             ]
         },
         {
+            "@id": null,
             "@type": "Organisation"
         },
         {
             "@id": "https://hdl.handle.net/0000/00.00000",
-            "@type": "File",
+            "@type": "Dataset",
             "encodingFormat": "Source code",
+            "name": "Client application",
             "description": "Some test scripts",
+            "contentSize": null,
+            "Language": null,
+            "dateCreated": null,
+            "URL": null,
+            "downloadUrl": null,
+            "endDate": null,
             "license": [
                 {
                     "@id": "http://opensource.org/licenses/mit-license.php",
                     "@type": "CreativeWork",
                     "startDate": "2020-09-30"
                 }
-            ]
+            ],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         },
         {
             "@id": "https://hdl.handle.net/0000/00.00000",
-            "@type": "File",
+            "@type": "Dataset",
             "encodingFormat": "Images",
+            "name": "Image collection",
             "description": "Images of test object X",
-            "license": []
+            "contentSize": null,
+            "Language": null,
+            "dateCreated": null,
+            "URL": null,
+            "downloadUrl": null,
+            "endDate": null,
+            "license": [],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         },
         {
             "@id": "https://hdl.handle.net/0000/00.00000",
-            "@type": "File",
+            "@type": "Dataset",
             "encodingFormat": "other",
+            "name": "Interviews",
             "description": "Audio recordings with test persons",
+            "contentSize": null,
+            "Language": null,
+            "dateCreated": null,
+            "URL": null,
+            "downloadUrl": null,
+            "endDate": null,
             "license": [
                 {
                     "@id": "http://creativecommons.org/licenses/by/4.0/",
                     "@type": "CreativeWork",
                     "startDate": "2021-01-01"
                 }
-            ]
+            ],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         }
     ]
 }

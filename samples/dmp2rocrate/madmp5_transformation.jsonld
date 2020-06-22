@@ -31,18 +31,37 @@
         },
         {
             "@id": "https://zenodo.org/badge/latestdoi/257124636",
-            "@type": "File",
+            "@type": "Dataset",
+            "encodingFormat": null,
+            "name": "Models, parameters and errors",
             "description": "Produced data consist of models, parameters and errors files, each for corresponding analysis",
+            "contentSize": null,
             "Language": "eng",
             "dateCreated": "2020-04-19",
             "URL": "https://github.com/mensBash/DataStewardship/tree/master/weka_experiment",
+            "downloadUrl": null,
+            "endDate": null,
             "license": [
                 {
                     "@id": "https://creativecommons.org/publicdomain/zero/1.0/deed.de",
                     "@type": "CreativeWork",
                     "startDate": "2020-04-19"
                 }
-            ]
+            ],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": null,
+                "description": null
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         }
     ]
 }

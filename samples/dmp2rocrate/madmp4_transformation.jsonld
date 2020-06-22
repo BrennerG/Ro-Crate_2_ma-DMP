@@ -42,42 +42,76 @@
             ]
         },
         {
+            "@id": null,
             "@type": "Organisation"
         },
         {
             "@id": "https://doi.org/10.5281/zenodo.1039839",
-            "@type": "File",
+            "@type": "Dataset",
             "encodingFormat": "raw data",
-            "name": "GapMinder",
+            "name": "Gapminder World Development Indicators",
             "description": "Gapminder represents a resource of several datasets containing information about (almost) all countries around the world over the last two centuries.",
+            "contentSize": null,
             "Language": "eng",
             "dateCreated": "2017-10-31",
             "URL": "https://www.gapminder.org/data/",
             "downloadUrl": "https://www.gapminder.org/data/",
+            "endDate": null,
             "license": [
                 {
                     "@id": "https://zenodo.org/record/1039839",
                     "@type": "CreativeWork",
                     "startDate": "2017-10-31"
                 }
-            ]
+            ],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": "eng",
+                "description": "Prodives description of the meaning of each filename of dataset files."
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         },
         {
             "@id": "https://doi.org/10.5281/zenodo.3757329",
-            "@type": "File",
+            "@type": "Dataset",
             "encodingFormat": "merged data",
+            "name": "GapMinder World subset merged",
             "description": "The data consists of multiple \"Gapminder World\" datasets merged together. Gapminder provides several datasets containing information about (almost) all countries around the world over the last two centuries.\nThe transformation consists of merging the CSV files and correcting the country and the region names when necessary.",
+            "contentSize": null,
             "Language": "eng",
             "dateCreated": "2020-04-19",
             "URL": "https://github.com/GhaithArf/visualisation-dashboard/tree/master/data/merged",
             "downloadUrl": "https://github.com/GhaithArf/visualisation-dashboard/tree/master/data/merged",
+            "endDate": null,
             "license": [
                 {
                     "@id": "https://creativecommons.org/licenses/by/4.0/legalcode",
                     "@type": "CreativeWork",
                     "startDate": "2020-05-02"
                 }
-            ]
+            ],
+            "keywords": null,
+            "metadata": {
+                "@type": "File",
+                "encodingFormat": null,
+                "Language": "eng",
+                "description": "Describes the meaning and unit of each attribute in the dataset."
+            }
+        },
+        {
+            "@id": null,
+            "@type": "RepositoryCollection",
+            "title": null,
+            "description": null,
+            "location": null
         }
     ]
 }

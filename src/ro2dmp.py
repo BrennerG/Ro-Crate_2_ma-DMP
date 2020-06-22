@@ -15,7 +15,7 @@ class DMP_Constructor:
 
     def write(self, output_PATH:str="ma_DMP.json"):
         with open(output_PATH, 'w') as file:
-            json.dump(self.dmp, file)
+            json.dump(self.dmp, file, indent=4)
 
     def check(self, key:str, pos:dict, l2_pos:str=None):
         if l2_pos:
@@ -165,9 +165,12 @@ if __name__ == "__main__":
     ro2 = 'samples/ro-crate-metadata2.jsonld' 
     ro3 = 'samples/ro-crate-metadata3.jsonld' 
 
-    out = 'transformation3.jsonld'
-    DC = DMP_Constructor(ro3)
-    DC.construct()
-    DC.write(out)
+    ros = [ro1, ro2, ro3]
+    filenames = ['transformation1.jsonld', 'transformation2.jsonld', 'transformation3.jsonld']
+
+    for i in range(0,len(ros)):
+        DC = DMP_Constructor(ros[i])
+        DC.construct()
+        DC.write(filenames[i])
 
     print("DONE")
