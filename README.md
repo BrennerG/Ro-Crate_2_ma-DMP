@@ -6,12 +6,15 @@ TODO identifiers -> provide link
 ## Usage
 TODO shellscript
 
-## Mapping maDMP to RO-Crate
-TODO mapping of super entities
-
-### dmp attributes
+## Mapping
+### dmp
 maDMP           | RO-Crate      
 -------------   | -------------
+contact | distinct entity [documentation](https://researchobject.github.io/ro-crate/1.0/#people)
+contributor | distinct entity [documentation](https://researchobject.github.io/ro-crate/1.0/#people)
+cost    | -
+dataset | distinct entity [documentation](https://researchobject.github.io/ro-crate/1.0/#core-metadata-for-data-entities)
+project | distinct entity [documentation](https://researchobject.github.io/ro-crate/1.0/#funding-and-grants)
 title   | [schema.org/name](http://schema.org/name)
 dmp_id  | @id (type omitted) 
 created | [schema.org/dateCreated](http://schema.org/dateCreated)
@@ -51,9 +54,6 @@ contact_id  | @id (type omitted)
 mbox    | [schema.org/email](http://schema.org/email)
 name    | [schema.org/name](http://schema.org/name)
 role | [schema.org/Role](http://schema.org/Role)
-
-### cost
-omitted
 
 ### dataset
 maDMP           | RO-Crate      
@@ -116,101 +116,6 @@ maDMP           | RO-Crate
 description | [schema.org/description](http://schema.org/description)
 language    | [schema.org/Language](http://schema.org/Language)
 metadata_standard_id    | [schema.org/encodingFormat](http://schema.org/encodingFormat)
-
-## DMP Reference
-    dmp
-        contact
-            contact_id
-                identifier
-                type
-            mbox
-            name
-        contributor
-            contributor_id
-                identifier
-                type
-            mbox
-            name
-            role
-        cost
-            currency_code
-            description
-            title
-            value
-        created
-        dataset
-            data_quality_assurance
-            dataset_id
-                identifier
-                type
-            description
-            distribution
-                access_url
-                available_until
-                byte_size
-                data_access
-                description
-                download_url
-                format
-                host
-                    availability
-                    backup__frequency
-                    backup_type
-                    certified_with
-                    description
-                    geo_location
-                    pid_system
-                    storage_type
-                    support_versioning
-                    title
-                    url
-                license
-                    license_ref
-                    start_date
-                title
-            issued
-            keyword
-            language
-            metadata
-                description
-                language
-                metadata_standard_id
-                    identifier
-                    type
-            personal_data
-            preservation_statement
-            security_and_privacy
-                description
-                title
-            sensitive_data
-            technical_resource
-                description
-                name
-            title
-            type
-        description
-        dmp_id
-            identifier
-            type
-        ethical_issues_description
-        ethical_issues_exist
-        ethical_issues_report
-        language
-        modified
-        project
-            description
-            end
-            funding
-                funder_id
-                    identifier
-                    type
-                funding_status
-                grant_id
-                    identifier
-                    type
-            start
-            title
-        title
 
 ## Related Links
 [Ro-Crate](https://researchobject.github.io/ro-crate/1.0/)  
