@@ -269,12 +269,12 @@ class RO_Crate_constructor:
 
         return entities
 
-    def construct(self):
-        self.add(self.extract_dmp_base())
-        self.add(self.extract_contact())
-        self.add(self.extract_project_funding_R())
-        self.add(self.extract_contributors())
-        self.add(self.extract_dataset())
+    def construct(self, clean=False):
+        self.add(self.extract_dmp_base(),clean=clean)
+        self.add(self.extract_contact(), clean=clean)
+        self.add(self.extract_project_funding_R(), clean=clean)
+        self.add(self.extract_contributors(), clean=clean)
+        self.add(self.extract_dataset(), clean=clean)
         return self.RO_Crate
 
     def write(self, output_PATH:str="ro-crate-metadata.jsonld"):

@@ -1,10 +1,16 @@
 # RO-Crate & maDMP Parser
-TODO general
-TODO missing fields -> maDMP is still in there
-TODO identifiers -> provide link
+This tool automatically parses maDMPs to RO-Crate's metadata file and vice versa.  
+To use it, simply execute the `convert.py` file:  
 
-## Usage
-TODO shellscript
+    python3 convert.py <source_path> <target_path>  
+
+Note, that some of the output values may contain null values by default.  
+This is enabled, so you can manually complete them.  
+In case prefer a cleaned version without null values, please use:  
+
+    python3 convert.py -c <source_path> <target_path>  
+
+(clean output is still in development, some null values may appear)  
 
 ## Mapping
 ### dmp
