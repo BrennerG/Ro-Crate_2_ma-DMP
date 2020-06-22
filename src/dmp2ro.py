@@ -46,13 +46,16 @@ class RO_Crate_constructor:
             ]
         }
 
-    def add(self, entity, clean=True):
+    def add(self, entity, clean=False):
         if type(entity) == dict:
             if clean:
                 clean = {}
                 for k in entity:
                     if type(k) != dict and entity[k] != None and len(entity) > 1:
-                        clean[k] = entity[k]
+                        if type(entity[k]) == list:
+                            self.add(entity[k])
+                        else:
+                            clean[k] = entity[k]
                 self.RO_Crate['@graph'].append(clean)
             else:
                 self.RO_Crate['@graph'].append(entity)
@@ -280,13 +283,19 @@ class RO_Crate_constructor:
 
 # MAIN
 if __name__ == "__main__":
+    madmp1 = 'samples/maDMP1.json'
+    madmp2 = 'samples/maDMP2.json'
+    madmp3 = 'samples/maDMP3.json'
+    madmp4 = 'samples/maDMP4.json'
+    madmp5 = 'samples/maDMP5.json'
     ex1 = 'samples/ex1-header-fundedProject.json'
     ex2 = 'samples/ex2-dataset-planned.json'
     ex3 = 'samples/ex3-dataset-finished.json'
     ex4 = 'samples/ex4-dataset-embargo.json'
     ex9 = 'samples/ex9-dmp-long.json'
-    in_PATH = ex9
-    out_PATH = 'transformation_ex9.jsonld'
+
+    in_PATH = madmp1
+    out_PATH = '1.jsonld'
 
     RCC = RO_Crate_constructor(in_PATH)
     rocrate = RCC.construct()
